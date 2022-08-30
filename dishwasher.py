@@ -45,8 +45,8 @@ for possible_end in list(possible_ends.index):
 
     # simple heuristic to prefilter:
     #   all samples must be present
-    #   at least 1 kWh must be consumed in the timeframe
-    #   the first 9 minutes must be > 1500 W
+    #   at least 1.5 kWh must be consumed in the timeframe
+    #   minute 1-8 must be > 1500 W
 
     kWh = match["value"].sum() / 60 / 1000
 
